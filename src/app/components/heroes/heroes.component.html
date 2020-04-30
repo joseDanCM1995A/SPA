@@ -1,0 +1,9 @@
+<h1>Héroes <small>de Marvel y DC</small></h1>
+<hr>
+
+<div class="card-columns">
+    <!--mandando los valores al componente hijo por medio de [variable del input="variable local"]-->
+    <!-- escuchando la salida del hijo -->
+    <app-heroe-tarjeta (heroeSeleccionado)="verHeroe($event)" *ngFor="let hero of heroes; let i = index" [hero]="hero" [index]="i"></app-heroe-tarjeta>
+
+</div>

@@ -1,0 +1,31 @@
+<h1 class="text-left animated fadeIn">{{ heroe.nombre | uppercase}}&nbsp;(<small>{{ heroe.aparicion | date:'y' }}</small>)</h1>
+<hr>
+
+<!--definiendo la estructura -->
+<!--definiendo que será en formato de renglon-->
+<div class="row animated fadeIn">
+    <!--definiendo las columnas-->
+    <!--columna para la imagen-->
+    <div class="col-md-4">
+        <!--obteniendo el dato de la imagen-->
+        <img src="{{heroe.img}}" class="img-fluid" alt="">
+        <br><br>
+    </div>
+    <!--columna para los datos-->
+
+    <div class="col-md-8">
+        <h3>{{heroe.nombre}}</h3>
+        <hr>
+        <p>{{heroe.bio}}</p>
+        <p>{{ heroe.aparicion}}</p>
+        <div class="text-center">
+            <!--imagen de dc o marvel-->
+            <img *ngIf="heroe.casa=='Marvel'" class="img-logo" src="assets/img/Marvel_logo.png" alt="logo cd o mar">
+            <img *ngIf="heroe.casa=='DC'" class="img-logo" src="assets/img/Dc_logo.png" alt="logo cd o mar">
+
+        </div>
+        <a [routerLink]="['/heroes']" class="btn btn-outline-danger btn-block">Regresar</a>
+
+    </div>
+
+</div>

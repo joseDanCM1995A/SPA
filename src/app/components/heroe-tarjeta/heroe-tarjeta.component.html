@@ -1,0 +1,12 @@
+<div class="card p-3 animated fadeIn fast radius">
+    <img class="card-img-top img-fluid pb-3" src="{{ hero.img }}" alt="Card image cap">
+    <div class="card-block">
+        <h4 class="card-title text-center">{{ hero.nombre }}</h4>
+        <p class="card-text text-center">{{ hero.aparicion }}</p>
+        <div class="bio">
+            <p class="card-text text-justify">{{ hero.bio }}</p>
+        </div>
+        <p class="card-text text-center">{{ hero.casa }}</p>
+    </div>
+    <button (click)="verHeroe()" class="btn btn-outline-primary btn-block mt-2">Ver más...</button>
+</div>

@@ -1,0 +1,17 @@
+<h1>Resultados: <small>{{ heroeBuscado }}</small></h1>
+<hr>
+
+<div class="row" *ngIf="heroes.length == 0">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            No se encontraron coincidencias con el termino: {{ heroeBuscado }}
+        </div>
+
+    </div>
+</div>
+
+<div class="card-columns">
+    <!-- <app-heroe-tarjeta *ngFor="let hero of heroes; let i = index; " [hero]="hero" [index]="i"></app-heroe-tarjeta> -->
+    <!-- cambiando el index del ngfor por el index con id "hero.idx" -->
+    <app-heroe-tarjeta *ngFor="let hero of heroes;" [hero]="hero" [index]="hero.idx"></app-heroe-tarjeta>
+</div>
